@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAM-MG | Formulário</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: linear-gradient(to right, rgb(248,249,250), rgb(203,211,218));
+        }
+
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(248,249,250,1.000);
+            padding: 15px;
+            border-radius: 15px;
+            width: 25%;
+        }
+        fieldset{
+            border: 3px solid darkred;
+        }
+
+        legend{
+            border: 1px solid darkred;
+            padding: 8px;
+            text-align: center;
+            background-color: darkred;
+            border-radius: 8px;
+            color: white;           
+        }
+
+        .inputBox{
+            position: relative;
+        }
+        .inputU{
+            background: none;
+            border: none;
+            border-bottom: 1px solid;
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputU:focus ~ .labelInput,
+        .inputU:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: darkred;
+        }
+
+        #date{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            background-color:  rgb(206, 214, 221);
+        }
+
+        #submit{
+            background-image: linear-gradient(to right, rgb(248,249,250), rgb(203,211,218));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: black;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(207, 216, 226), rgb(144, 154, 163));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="" id="form">
+            <fieldset>
+                <legend><b>Cadastro</b> </legend>
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" name="Nome" id="Nome" class="inputU" required>
+                    <label for="Nome" class="labelInput">Nome Completo</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Idade" id="Idade" class="inputU" required>
+                    <label for="Idade" class="labelInput">Idade</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Profissão" id="Profissão" class="inputU" required>
+                    <label for="Profissão" class="labelInput">Profissão</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputU" required>
+                    <label for="email" class="labelInput">E-mail</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputU" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br>
+
+                <label for="date"><b>Data de Preenchimento:</b></label>
+                <input type="date" name="date" id="date" required>                   
+
+                <br><br>
+
+                <input type="submit" name="submt" id="submit">
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+</html>
